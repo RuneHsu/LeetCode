@@ -19,6 +19,27 @@ struct ListNode* oddEvenList(struct ListNode* head) {
 }
 
 // exeed the time limited
+/****************************************************************/
+// another c version
+
+struct ListNode* oddEvenList(struct ListNode* head) {
+    if (!head) return head;
+    struct ListNode *headp = head;
+    struct ListNode *p = head->next;
+    struct ListNode *pNext = NULL;
+    while(p && (pNext = p->next)){
+        p->next = pNext->next;
+        pNext->next = headp->next;
+        headp->next = pNext;
+        
+        
+        p = p->next;
+        headp = headp->next;
+    }
+    return head;
+}
+
+/* executed well*/
 
 /* C++ version */
 class Solution {
