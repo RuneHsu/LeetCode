@@ -86,7 +86,7 @@ public:
 };
 
 // general solution for different prime factor
-// ref: http://fisherlei.blogspot.it/2013/03/leetcode-merge-two-sorted-lists-solution.html
+// ref: http://fisherlei.blogspot.it/2015/10/leetcode-ugly-number-ii-solution.html
 
   class Solution {  
   public:  
