@@ -12,18 +12,9 @@
  *
  **********************************************************************************/
  
- class solution{
- public:
-    int addDigits(int num){
-      switch(random()%5 + 1){
-      case 1: return addDigits01(num);
-      case 2: return addDigits02(num);
-      case 3: return addDigits03(num);
-      case 4: return addDigits04(num);
-      case 5: return addDigits05(num);
-      default: return addDigits05(num);
-      }
-      
-      // need to be finished
+class Solution {
+public:
+    int addDigits(int num) {
+        return num > 9 ? (num%9 == 0 ? 9:num%9) : num;
     }
-}
+};
