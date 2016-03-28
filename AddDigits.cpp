@@ -11,7 +11,29 @@
  * 	Could you do it without any loop/recursion in O(1) runtime?
  *
  **********************************************************************************/
- 
+ // Let's observe the pattern
+        //    1    1
+        //    2    2
+        //    ... ...
+        //    8    8    
+        //    9    9    
+        //    10    1
+        //    11    2
+        //    12    3    
+        //    ... ...
+        //    17    8
+        //    18    9
+        //    19    1
+        //    20    2
+        //    ...  ...
+        // It looks most of number just simply %9 is the answer, 
+        // but there are some edge cases.
+        //    9%9=0 but we need 9. 
+        //    18%9=0 but we need 9
+        // so we can find the solution is:
+        //    1) num <=9, return num
+        //    2) num > 9, reutrn num%9 if num%9>0
+        //                return 9 if num%9 ==0
 class Solution {
 public:
     int addDigits(int num) {
