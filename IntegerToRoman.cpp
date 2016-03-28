@@ -1,6 +1,12 @@
 // Source: https://leetcode.com/submissions/detail/57528247/
 // Date: 2016-03-28
-/************************************************************
+/**************************************************  
+ * Given an integer, convert it to a roman numeral.
+ *
+ * Input is guaranteed to be within the range from 1 to 3999.
+ **************************************************/
+ 
+ // The trick is using greedy algorithm
 class Solution {
 public:
   string intToRoman(int num){
