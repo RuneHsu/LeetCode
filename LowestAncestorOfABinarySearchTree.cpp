@@ -47,3 +47,20 @@ public:
     }
 };
 
+/*******************************************************************************/
+// ref: https://github.com/kamyu104/LeetCode/blob/master/C%2B%2B/lowest-common-ancestor-of-a-binary-search-tree.cpp
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        auto s = min(p->val, q->val);
+        auto b = max(p->val, q->val);
+
+        while (root->val < s || root->val > b) {
+            // Keep searching since root is outside of [s, b].
+            root = s <= root->val ? root->left : root->right;
+        }
+
+        // s <= root->val && root->val <= b.
+        return root;   
+    }
+};
