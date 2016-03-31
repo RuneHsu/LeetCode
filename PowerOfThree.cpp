@@ -15,7 +15,7 @@
  class Solution {
 public:
     bool isPowerOfThree(int n) {
-        double logRes = log10(n)/log10(3);        // didn't get it
+        double logRes = log10(n)/log10(3);        // If n is power of 3, it will return a int, didn't get it
         return (logRes - int(logRes) == 0);
     }
 };
