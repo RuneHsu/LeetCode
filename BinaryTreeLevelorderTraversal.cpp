@@ -1,4 +1,4 @@
-// Source: https://leetcode.com/submissions/detail/58772425/
+// Source: https://leetcode.com/problems/binary-tree-level-order-traversal/
 // Date: 2016-04-11
 /********************************************************************************** 
 * 
@@ -43,6 +43,39 @@
 * 
 *               
 **********************************************************************************/
+class Solution {
+public:
+    vector<vector<int>> levelOrder(TreeNode* root) {
+      vector<vector<int>> result;
+      if (root==NULL){
+        return result;  
+      } 
+      queue<TreeNode *> q;
+      q.push(root);
+      while(!q.empty()){
+          int size = q.size();
+          vector<int> level;
+          
+          for(int i=0; i<size; i++){
+              TreeNode *head = q.front();
+              q.pop();
+              level.push_back(head->val);
+              if (head->left){
+                  q.push(head->left);
+              }
+              if (head->right){
+                  q.push(head->right);
+              }
+              
+          }
+          result.push_back(level);
+      }
+      return result;
+    }
+};
+
+// Reverse version
+
 class Solution {
 public:
     vector<vector<int>> levelOrderBottom(TreeNode *root) {
