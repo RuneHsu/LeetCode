@@ -1,5 +1,6 @@
 // Source: https://leetcode.com/problems/rectangle-area/
 // Date: 2016-04-25
+
 /*************************************************************************
 * Find the total area covered by two rectilinear rectangles in a 2D plane.
 * 
@@ -9,6 +10,8 @@
 * Rectangle Area
 * Assume that the total area is never beyond the maximum possible value of int.
 ****************************************************************************/
+// ref: https://leetcode.com/discuss/43549/just-another-short-way
+// explanation https://leetcode.com/discuss/51354/an-explanation-in-plain-language
 
 class Solution {
 public:
