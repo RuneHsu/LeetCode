@@ -11,6 +11,7 @@
 * Follow up:
 * If this function is called many times, how would you optimize it?
 *********************************************************************/
+// bulk data ref: https://leetcode.com/discuss/27328/java-solution-and-optimization
 
 class Solution {
 public:
