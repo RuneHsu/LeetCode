@@ -12,7 +12,7 @@
 *
 * Note: The sequence of integers will be represented as a string.
 ******************************************************************************/
-
+// An interesting proof that count can not larger than 4: https://leetcode.com/discuss/6762/how-to-proof-the-count-is-always-less-than-10
 class Solution {
 public:
     string countAndSay(int n) {
