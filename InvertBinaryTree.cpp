@@ -61,6 +61,40 @@ public:
     }
 };
 
+/*********************************************
+ * class Solution {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        stack<TreeNode*> t;
+        t.push(root);
+        
+        while(!t.empty()){
+            TreeNode* p = t.top();
+            t.pop();
+            if(p){
+                t.push(p->right);
+                t.push(p->left);
+                std::swap(p->left,p->right);
+            }
+        }
+        return root;
+    }
+};
+
+class Solution {
+    public:
+    TreeNode* invertTree(TreeNode* root){
+        if (root){
+            invertTree(root->left);
+            invertTree(root->right);
+            std::swap(root->left, root->right);
+        }
+        return root;
+    }
+};
+************************************************************/
+
+
 
 // Another version of invert binary tree
 // Source: https://www.quora.com/What-is-the-algorithmic-approach-to-invert-a-given-binary-tree
