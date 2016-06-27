@@ -75,3 +75,35 @@ public:
         return result;
     }
 };
+
+// According to https://segmentfault.com/a/1190000005751185
+class Solution{
+    
+    public:
+    
+    void fill(string &str, int start, int initialDistance, int magic, string s){
+        while (start < s.size()){
+            if (initialDistance == 0)
+                initialDistance = magic;
+            str.insert(str.end(),s[start]);
+            start += initialDistance;
+            initialDistance = magic - initialDistance;
+        }
+    }
+    
+    string convert(string s, int numRows){
+        if (numRows <= 1)
+        return s;
+        
+        string str = "";
+        int magic = numRows*2 - 2;
+        int initialDistance = magic;
+        
+        for (int i = 0; i < numRows; i++){
+            fill(str, i, initialDistance, magic, s);
+            initialDistance = initialDistance - 2;
+        }
+
+        return str;
+    }
+};
